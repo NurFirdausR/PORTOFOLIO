@@ -24,6 +24,8 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               <ProjectCard
                 key={project.id}
                 title={project.title}
+                type={project.type}
+                developerAs={project.developerAs}
                 description={project.desc}
                 blurHash={project.blurHash}
                 logo={project.logo}

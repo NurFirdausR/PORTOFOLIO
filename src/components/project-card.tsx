@@ -6,15 +6,17 @@ import {
   useColorModeValue,
   Tag,
   Link,
-  Grid, 
-  GridItem,
+  SimpleGrid,
+  Box,
 } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { getTagColor } from "style/theme";
+import { getTagColor,getTagColorType,getTagColorDevas } from "style/theme";
 import LazyImage from "./lazy-image";
 
 interface ProjectCardProps {
   title: string;
+  type: string;
+  developerAs: string;
   description: string;
   logo: string;
   blurHash: string;
@@ -24,6 +26,8 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
+  type,
+  developerAs,
   description,
   logo,
   blurHash,
@@ -43,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         borderWidth="1px"
         borderColor={useColorModeValue("gray.100", "gray.700")}
         w="100%"
-        h="100%"
+        h="120px"
         textAlign="left"
         align="start"
         spacing={4}
@@ -54,16 +58,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           src={logo}
           blurHash={blurHash}
           size="sm"
-          width={33}
-          height={33}
+          width={90}
+          height={90}
           layout="fixed"
           rounded="md"
         />
         <VStack align="start" justify="flex-start">
           <VStack spacing={0} align="start">
             <motion.div layout>
-              <Grid templateColumns='repeat(5, 1fr)' >
-              <GridItem colSpan={2} >
+              <SimpleGrid columns={2} spacingX='50%'  >
+              <Box w='400px' >
                 
                 <Text 
                     as={Link}
@@ -77,17 +81,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     {title}
                   </Text>
                   
-              </GridItem>
-              <GridItem colStart={5} colEnd={6}>
-                  <HStack spacing="1">
-                    {technologies.map(tech => (
-                      <Tag size="sm" colorScheme={getTagColor(tech)}>
-                        {tech}
+              </Box>
+              <Box w='400px' >
+                  <HStack >
+                      <Tag size="md" backgroundColor={getTagColorType(type)}>
+                        {type}
                       </Tag>
-                    ))}
+                      <Tag size="md" backgroundColor={getTagColorDevas(developerAs)}>
+                        {developerAs}
+                      </Tag>
                   </HStack>
-              </GridItem>
-              </Grid >
+              </Box>
+              </SimpleGrid >
                 <HStack spacing="1">
                   {technologies.map(tech => (
                     <Tag size="sm" colorScheme={getTagColor(tech)}>
