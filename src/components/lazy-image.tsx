@@ -33,8 +33,8 @@ const LazyImage = (props: LazyImageProps) => {
             src={src}
             objectFit="cover"
             alt="cover image"
-            width={width}
-            height={height}
+            width={width+"px"}
+            height={height+"px"}
             size={size}
             layout={layout}
             rounded={rounded}

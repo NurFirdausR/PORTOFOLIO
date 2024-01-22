@@ -179,7 +179,7 @@ export const theme = extendTheme({
 
 export const getTagColor = type => {
   type = type.toLowerCase()
-  if (type === "rails" || type === "ruby") {
+  if (type === "laravel" || type === "php") {
     return "red";
   } else if (type === "react") {
     return "cyan";
@@ -190,4 +190,25 @@ export const getTagColor = type => {
   } else if (type === "chakraui" || type === "css") {
     return "teal";
   }
+};
+export const getTagColorType = type => {
+  type = type.toLowerCase()
+  if (type === "at-work") {
+    return "blue.50";
+  } else if (type === "school-project") {
+    return "green.200";
+  } else if (type === "dummy-project") {
+    return "red.200";
+  } 
+};
+
+export const getTagColorDevas = type => {
+  type = type.toLowerCase()
+  if (type === "core") {
+    return "red.200";
+  } else if (type === "support-core") {
+    return "red.100";
+  } else if (type === "support") {
+    return "red.50";
+  } 
 };

@@ -69,28 +69,33 @@ const Home = () => {
           }}
         >
           <Header underlineColor={ORANGE} emoji="👋" mt={0} className="face">
-            Hey!
+          Hi, I’m Nur!
           </Header>
           <Box as="h2" fontSize="2xl" fontWeight="400" textAlign="left">
-            My name is{" "}
+            {/* My name is{" "} */}
             <Box as="strong" fontWeight="600">
-              Ahmad
+              {/* Nur */}
             </Box>{" "}
             and I&apos;m a{" "}
             <Box as="span" whiteSpace="nowrap">
-              Full Stack Developer and
+              Full Stack Developer 
             </Box>{" "}
-            <Box as="span" whiteSpace="nowrap">
+            {/* <Box as="span" whiteSpace="nowrap">
               an open source lover&nbsp;
             </Box>
             from{" "}
             <Box as="span" whiteSpace="nowrap">
               Pakistan 🇵🇰
-            </Box>
+            </Box> */}
           </Box>
-          <Box as="h2" fontSize="2xl" fontWeight="400" mt={5} textAlign="left">
-            This is my digital garden, where I write about the things I'm
-            working on and share what I've learned. 😊
+          <Box as="h2" fontSize="xl" fontWeight="400" mt={5} textAlign="left">
+          I'm passionate about IT software engineering, with expertise from vocational school. I focus on
+DevOps and backend development, and I'm also interested in the stock market.
+
+          </Box>
+          <Box as="h2" fontSize="xl" fontWeight="400" mt={5} textAlign="left">
+I continuously enhance my skills through courses and stay updated with industry trends. I'm excited
+to connect with like-minded professionals and explore collaboration opportunities.😊
           </Box>
         </MotionFlex>
       </Flex>
@@ -110,48 +115,6 @@ const Home = () => {
         }}
       >
         <Box mt={10}>
-          <Stack
-            mb={10}
-            mx={[0, 0, 10]}
-            padding={4}
-            align="start"
-            borderLeft="4px solid"
-            borderColor={"#53c8c4"}
-            color={"whatsapp"}
-            _hover={{ shadow: "lg" }}
-            backgroundColor={useColorModeValue("gray.100", "#1e2533")}
-            rounded="sm"
-            fontSize="md"
-          >
-            <Text textAlign="center" color="#53c8c4" fontWeight="bold">
-              Highlights
-            </Text>
-            <UnorderedList textAlign="left" paddingLeft={5} m={0}>
-            <ListItem>
-                <Link as={NavLink} to="/open-source">
-                  Live/Local Github Repos
-                  <Badge ml="1" colorScheme="green">
-                    New
-                  </Badge>
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link as={NavLink} to="/story-timeline">
-                  Story page
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link as={NavLink} to="/tech-stack">
-                  Tech Stack
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link as={NavLink} to="/achievements">
-                  Achievements
-                </Link>
-              </ListItem>
-            </UnorderedList>
-          </Stack>
           <Projects projects={projectsList} />
         </Box>
       </MotionBox>
