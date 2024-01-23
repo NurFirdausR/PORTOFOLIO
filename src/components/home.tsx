@@ -17,7 +17,7 @@ import Header from "./header";
 import Projects from "./projects";
 import { projectsList } from "data/projects-list";
 import "style/style.css";
-import UserIcon from "assets/images/user_icon.png";
+import UserIcon from "assets/images/me.jpeg";
 
 const ANIMATION_DURATION = 0.5;
 const ORANGE = "#ff9400";

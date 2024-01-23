@@ -2,6 +2,7 @@
 import kehati from "assets/images/projects/kehati.png";
 import kemenag from "assets/images/projects/logo_kemenag.png";
 import pengkat from "assets/images/projects/pengkat.png";
+import evogym from "assets/images/projects/evogym.png";
 
 export const projectsList = [
   {
@@ -48,5 +49,27 @@ export const projectsList = [
     link: "https://github.com/NurFirdausR/UKK-PENGKAT",
     desc: `Aplikasi Pengaduan Masyarakat berfokus pada keluh  kesah masyarakat supaya dapat di evaluasi melalui aplikasi oleh  pemerintah setempat`,
     technologies: ["html","css", "javascript","php", "laravel"]
+  },
+  {
+    id: 5,
+    title: "Evogym",
+    type: "dummy-project",
+    developerAs: "core",
+    logo: evogym,
+    blurHash: "L1O^uE0679I00AGT?.H{00y7p2tK",
+    link: "https://github.com/NurFirdausR/react-ts-fitness",
+    desc: `This is an Landing Page Evogym i was build this landing page for learn my react js `,
+    technologies: ["html","css", "javascript","react js", "next js"]
+  },
+  {
+    id: 6,
+    title: "GoMovies",
+    type: "dummy-project",
+    developerAs: "core",
+    logo: "",
+    blurHash: "L1O^uE0679I00AGT?.H{00y7p2tK",
+    link: "https://github.com/NurFirdausR/react-ts-fitness",
+    desc: `This is an GoMovies that just simpliest application build by golang and react js focus on functionality and feature like auth,graphql,fetch api,docker i was learn this for knowing how backend and frontend work separately `,
+    technologies: ["html","css", "javascript","react js", "golang","docker"]
   },
 ];

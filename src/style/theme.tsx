@@ -181,8 +181,12 @@ export const getTagColor = type => {
   type = type.toLowerCase()
   if (type === "laravel" || type === "php") {
     return "red";
-  } else if (type === "react") {
+  } else if (type === "react" || type === "react js"  ) {
     return "cyan";
+  } else if (type === "next js" || type === "golang") {
+    return "blue";
+  } else if (type === "docker") {
+    return "gray";
   } else if (type === "javascript") {
     return "yellow";
   } else if (type === "typescript" || type === "tailwindcss") {
