@@ -6,6 +6,8 @@ import {
   useColorModeValue,
   Tag,
   Link,
+  Grid, 
+  GridItem,
 } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getTagColor } from "style/theme";
@@ -60,18 +62,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <VStack align="start" justify="flex-start">
           <VStack spacing={0} align="start">
             <motion.div layout>
-              <HStack>
-                <Text
-                  as={Link}
-                  href={link}
-                  fontWeight="bold"
-                  fontSize="md"
-                  noOfLines={1}
-                  onClick={e => e.stopPropagation()}
-                  isExternal
-                >
-                  {title}
-                </Text>
+              <Grid templateColumns='repeat(5, 1fr)' >
+              <GridItem colSpan={2} >
+                
+                <Text 
+                    as={Link}
+                    href={link}
+                    fontWeight="bold"
+                    fontSize="md"
+                    noOfLines={1}
+                    onClick={e => e.stopPropagation()}
+                    isExternal
+                  >
+                    {title}
+                  </Text>
+                  
+              </GridItem>
+              <GridItem colStart={5} colEnd={6}>
+                  <HStack spacing="1">
+                    {technologies.map(tech => (
+                      <Tag size="sm" colorScheme={getTagColor(tech)}>
+                        {tech}
+                      </Tag>
+                    ))}
+                  </HStack>
+              </GridItem>
+              </Grid >
                 <HStack spacing="1">
                   {technologies.map(tech => (
                     <Tag size="sm" colorScheme={getTagColor(tech)}>
@@ -79,7 +95,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     </Tag>
                   ))}
                 </HStack>
-              </HStack>
             </motion.div>
             <AnimatePresence>
               <motion.div
